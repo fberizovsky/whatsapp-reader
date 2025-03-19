@@ -301,6 +301,9 @@ const WhatsAppChatViewer: React.FC = () => {
           </div>
         )}
       </div>
+      <div className="footer">
+        <h1>Como te vas a olvidar el PIN!!!!!!</h1>
+      </div>
     </div>
   );
 };

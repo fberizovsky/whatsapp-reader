@@ -207,6 +207,23 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+
+  .footer {
+    background-color: #128C7E;
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .footer h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+  }
+  
   
   /* Estilos responsive para pantallas pequeñas */
   @media (max-width: 600px) {
