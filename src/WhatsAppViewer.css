@@ -1,0 +1,241 @@
+.whatsapp-viewer {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Regla global para box-sizing */
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  .header {
+    background-color: #128C7E;
+    color: white;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+  }
+  
+  .file-input {
+    background-color: white;
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+    color: #333;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilos para el control de perspectiva */
+  .perspective-control {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .perspective-control span {
+    font-size: 0.9rem;
+  }
+  
+  .switch-button {
+    background-color: white;
+    color: #128C7E;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+  }
+  
+  .switch-button:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .chat-container {
+    background-color: #E5DDD5;
+    min-height: 70vh;
+    border-radius: 0 0 10px 10px;
+    padding: 20px;
+    overflow-y: auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 20px;
+    color: #555;
+  }
+  
+  .no-messages {
+    text-align: center;
+    padding: 40px 20px;
+    color: #555;
+  }
+  
+  .hint {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  .messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .message {
+    max-width: 65%;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    word-wrap: break-word;
+  }
+  
+  .message-me {
+    align-self: flex-end;
+    background-color: #DCF8C6;
+  }
+  
+  .message-other {
+    align-self: flex-start;
+    background-color: white;
+  }
+  
+  .message-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 0.75rem;
+    flex-wrap: wrap;
+  }
+  
+  .sender {
+    font-weight: bold;
+    color: #128C7E;
+  }
+  
+  .timestamp {
+    color: #777;
+  }
+  
+  .message-text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    white-space: pre-wrap;
+    color: #000000; /* Texto negro para el contenido del mensaje */
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  
+  /* Estilos para elementos multimedia */
+  .message-media {
+    margin-top: 8px;
+    max-width: 100%;
+  }
+  
+  .image-media {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 5px;
+    cursor: pointer;
+    object-fit: contain;
+  }
+  
+  .sticker-media {
+    max-width: 120px;
+    max-height: 120px;
+    border-radius: 0;
+  }
+  
+  .audio-container, .video-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+  }
+  
+  .audio-media {
+    width: 100%;
+    height: 36px;
+  }
+  
+  .video-media {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 5px;
+  }
+  
+  .audio-filename, .video-filename {
+    font-size: 0.7rem;
+    color: #555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .media-attachment {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    color: #000000;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  /* Estilos responsive para pantallas pequeñas */
+  @media (max-width: 600px) {
+    .whatsapp-viewer {
+      padding: 0 10px;
+    }
+    
+    .header {
+      padding: 12px;
+    }
+    
+    .header h1 {
+      font-size: 1.3rem;
+    }
+    
+    .perspective-control {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .switch-button {
+      width: 100%;
+    }
+    
+    .message {
+      max-width: 80%;
+    }
+    
+    .chat-container {
+      padding: 15px 10px;
+    }
+  }
